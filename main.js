@@ -12,22 +12,19 @@ for(let i =0; i<all.length; i++){
   newD.className = "product-box";
 
   newD.onclick = function(){
-// بيتحقق انها مش رقم
+    
     if(newD.textContent !== "=" && newD.textContent !== "Delet" && newD.textContent !== "C"){
     sum += newD.textContent;
     };
 
-    // للعمليه الحسابيه
     if(newD.textContent === "="){
       sum = eval(sum) ;
     };
 
-    // بيمسح احر رقم
     if(newD.textContent === "Delet"){
       sum = sum.slice(0,-1);
     };
 
-    // بيمسح كل المحتوى
     if(newD.textContent === "C"){
       sum = "";
     };
